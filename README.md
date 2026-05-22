@@ -15,7 +15,7 @@ the result against your success criteria. After significant actions it suggests
 - **Research** — Finds information (web, files, memory) when the plan needs it
 - **Execute** — Does the work; delegates to specialized skills when available
 - **Review** — Validates results against your success criteria before marking done
-- **Track** — Maintains progress across sessions using [mnem](https://github.com/Uranid/mnem)
+- **Track** — Maintains progress across sessions using [mnem](https://github.com/Uranid/mnem#install)
 
 Built-in templates: writing project, research report, admin clearout, code
 project, planning decision, meeting prep.
@@ -32,14 +32,19 @@ Register this repository as a marketplace, then install the plugin:
 ```
 
 **Optional:** Install [mnem](https://github.com/Uranid/mnem#install) for state
-persistence across sessions (`mnem init && mnem integrate`). Without it, Make Me
-works in session-only mode.
+persistence across sessions (`mnem init && mnem integrate claude-code`). Without
+it, Make Me works in session-only mode.
 
 ### Cowork
 
 1. Download `make-me.skill` from the [latest release](https://github.com/sjmgarnier/make-me/releases/latest)
 2. In Cowork, open **Settings → Capabilities → Skills**
 3. Click **Upload skill** and select the downloaded `make-me.skill` file
+
+**Optional:** Install [mnem](https://github.com/Uranid/mnem#install) for state
+persistence across sessions. Cowork users should follow the
+[manual MCP setup](https://github.com/Uranid/mnem/blob/main/docs/src/mcp.md)
+instructions. Without it, Make Me works in session-only mode.
 
 ## Usage
 
@@ -61,7 +66,7 @@ Make Me runs a loop: **Understand → Plan → Research → Execute → Review**
 a **Track** sub-skill running throughout. The loop is not strictly linear — the
 orchestrator can skip phases, loop back, or reorder based on the task.
 
-State is stored in the [mnem](https://github.com/Uranid/mnem) global graph so
+State is stored in the [mnem](https://github.com/Uranid/mnem#install) global graph so
 tasks resume across sessions, even after context compaction.
 
 ## License
