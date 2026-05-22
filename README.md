@@ -15,7 +15,7 @@ the result against your success criteria. After significant actions it suggests
 - **Research** — Finds information (web, files, memory) when the plan needs it
 - **Execute** — Does the work; delegates to specialized skills when available
 - **Review** — Validates results against your success criteria before marking done
-- **Track** — Maintains progress across sessions using [mnem](https://github.com/mnem-ai/mnem)
+- **Track** — Maintains progress across sessions using [mnem](https://github.com/Uranid/mnem)
 
 Built-in templates: writing project, research report, admin clearout, code
 project, planning decision, meeting prep.
@@ -23,7 +23,7 @@ project, planning decision, meeting prep.
 ## Requirements
 
 - [Claude Code](https://claude.ai/code) or Claude Desktop
-- [mnem](https://github.com/mnem-ai/mnem) for state persistence across sessions
+- [mnem](https://github.com/Uranid/mnem#install) for state persistence across sessions
   (`mnem init && mnem integrate` — without it, Make Me works in session-only mode)
 
 ## Installation
@@ -55,7 +55,7 @@ Make Me runs a loop: **Understand → Plan → Research → Execute → Review**
 a **Track** sub-skill running throughout. The loop is not strictly linear — the
 orchestrator can skip phases, loop back, or reorder based on the task.
 
-State is stored in the [mnem](https://github.com/mnem-ai/mnem) global graph so
+State is stored in the [mnem](https://github.com/Uranid/mnem) global graph so
 tasks resume across sessions, even after context compaction.
 
 ## License
