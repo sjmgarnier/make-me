@@ -1,7 +1,7 @@
 # Make Me
 
-A Claude Code skill that coaches you through complex tasks as a structured
-guide and orchestrator — not a doer.
+A skill for Claude Code and Cowork that coaches you through complex tasks as a
+structured guide and orchestrator — not a doer.
 
 Tell it what you want to accomplish. Make Me clarifies your goal, breaks it
 into steps, finds what you need, delegates to specialized skills, and validates
@@ -15,16 +15,10 @@ the result against your success criteria. After significant actions it suggests
 - **Research** — Finds information (web, files, memory) when the plan needs it
 - **Execute** — Does the work; delegates to specialized skills when available
 - **Review** — Validates results against your success criteria before marking done
-- **Track** — Maintains progress across sessions using [mnem](https://github.com/Uranid/mnem)
+- **Track** — Maintains progress across sessions using [mnem](https://github.com/Uranid/mnem) *(Claude Code only)*
 
 Built-in templates: writing project, research report, admin clearout, code
 project, planning decision, meeting prep.
-
-## Requirements
-
-- [Claude Code](https://claude.ai/code) or Claude Desktop
-- [mnem](https://github.com/Uranid/mnem#install) for state persistence across sessions
-  (`mnem init && mnem integrate` — without it, Make Me works in session-only mode)
 
 ## Installation
 
@@ -37,11 +31,15 @@ Register this repository as a marketplace, then install the plugin:
 /plugin install make-me@make-me
 ```
 
-### Cowork / Claude.ai
+**Optional:** Install [mnem](https://github.com/Uranid/mnem#install) for state
+persistence across sessions (`mnem init && mnem integrate`). Without it, Make Me
+works in session-only mode.
 
-Download `make-me.skill` from the [latest release](https://github.com/sjmgarnier/make-me/releases/latest), then:
+### Cowork
 
-**Settings → Capabilities → Skills → Upload skill**
+1. Download `make-me.skill` from the [latest release](https://github.com/sjmgarnier/make-me/releases/latest)
+2. In Cowork, open **Settings → Capabilities → Skills**
+3. Click **Upload skill** and select the downloaded `make-me.skill` file
 
 ## Usage
 
@@ -63,8 +61,8 @@ Make Me runs a loop: **Understand → Plan → Research → Execute → Review**
 a **Track** sub-skill running throughout. The loop is not strictly linear — the
 orchestrator can skip phases, loop back, or reorder based on the task.
 
-State is stored in the [mnem](https://github.com/Uranid/mnem) global graph so
-tasks resume across sessions, even after context compaction.
+In Claude Code, state is stored in the [mnem](https://github.com/Uranid/mnem)
+global graph so tasks resume across sessions, even after context compaction.
 
 ## License
 
