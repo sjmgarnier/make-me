@@ -8,7 +8,7 @@ description: >
   as a guide and orchestrator — not a doer. Uses a coach approach: suggests
   1-3 next steps after every action, user picks.
 type: library
-version: 2.0.0
+version: 2.0.1
 author: Simon Garnier
 category: productivity
 ---
