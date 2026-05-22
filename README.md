@@ -28,12 +28,20 @@ project, planning decision, meeting prep.
 
 ## Installation
 
-Register this repository as a Claude Code marketplace, then install the plugin:
+### Claude Code
+
+Register this repository as a marketplace, then install the plugin:
 
 ```bash
 /plugin marketplace add sjmgarnier/make-me
 /plugin install make-me@make-me
 ```
+
+### Cowork / Claude.ai
+
+Download `make-me.skill` from the [latest release](https://github.com/sjmgarnier/make-me/releases/latest), then:
+
+**Settings → Capabilities → Skills → Upload skill**
 
 ## Usage
 
