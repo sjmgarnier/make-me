@@ -1,6 +1,7 @@
 {
   "name": "make-me",
-  "version": "2.1.0",
+  "version": "2.1.1",
+  "main": ".opencode/plugins/make-me.js",
   "type": "module",
   "description": "A personal assistant skill library that coaches users through complex tasks",
   "author": "Simon Garnier",
