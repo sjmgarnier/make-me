@@ -1,6 +1,6 @@
 {
   "name": "make-me",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "type": "module",
   "description": "A personal assistant skill library that coaches users through complex tasks",
   "author": "Simon Garnier",

@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "A personal assistant skill that coaches users through complex tasks using structured workflows — brainstorming, planning, research, execution, and review.",
-    "version": "2.0.1"
+    "version": "2.1.0"
   },
   "plugins": [
     {
