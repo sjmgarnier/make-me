@@ -1,5 +1,6 @@
 ---
-name: "Make Me"
+name: make-me-claude
+compatibility: claude-code
 description: >
   A personal assistant skill library that helps users complete tasks through
   coaching, brainstorming, planning, and delegation to domain-specific skills.

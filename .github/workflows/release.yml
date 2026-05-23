@@ -14,16 +14,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build make-me.skill
+      - name: Build make-me-claude.skill
         run: |
-          cd skills/make-me
-          zip -r /tmp/make-me.skill . -x "*.DS_Store"
+          cd skills/make-me-claude
+          zip -r /tmp/make-me-claude.skill . -x "*.DS_Store"
 
-      - name: Create release and attach skill
+      - name: Build make-me-opencode.skill
+        run: |
+          cd skills/make-me-opencode
+          zip -r /tmp/make-me-opencode.skill . -x "*.DS_Store"
+
+      - name: Create release and attach skills
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "${{ github.ref_name }}" \
             --title "Make Me ${{ github.ref_name }}" \
             --generate-notes \
-            /tmp/make-me.skill
+            /tmp/make-me-claude.skill \
+            /tmp/make-me-opencode.skill

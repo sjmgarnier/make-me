@@ -1,3 +1,5 @@
 .DS_Store
 docs/
 .claude/settings.local.json
+.mnem
+opencode.json
