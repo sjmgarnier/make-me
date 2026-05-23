@@ -1,7 +1,7 @@
 # Make Me
 
-A skill for Claude Code and Cowork that coaches you through complex tasks as a
-structured guide and orchestrator — not a doer.
+A skill for Claude Code, Cowork, and OpenCode that coaches you through complex
+tasks as a structured guide and orchestrator — not a doer.
 
 Tell it what you want to accomplish. Make Me clarifies your goal, breaks it
 into steps, finds what you need, delegates to specialized skills, and validates
@@ -45,6 +45,43 @@ it, Make Me works in session-only mode.
 persistence across sessions. Cowork users should follow the
 [manual MCP setup](https://github.com/Uranid/mnem/blob/main/docs/src/mcp.md)
 instructions. Without it, Make Me works in session-only mode.
+
+### OpenCode
+
+Install via `opencode.json`:
+
+```json
+{
+  "plugin": [
+    "make-me@git+https://github.com/sjmgarnier/make-me"
+  ]
+}
+```
+
+The OpenCode version lives in `skills/make-me-opencode/` and uses OpenCode's
+native skill system with `compatibility: opencode` frontmatter.
+
+**Optional:** Install [mnem](https://github.com/Uranid/mnem#install) for state
+persistence across sessions. OpenCode is not auto-detected by `mnem integrate`,
+so create a project-level `opencode.json` that wires the mnem MCP server
+manually:
+
+```json
+{
+  "mcp": {
+    "mnem": {
+      "type": "local",
+      "command": "<path-to-mnem-binary>",
+      "args": ["mcp", "--repo", "<path-to-.mnem>"]
+    }
+  }
+}
+```
+
+Replace `<path-to-mnem-binary>` with the output of `which mnem` and
+`<path-to-.mnem>` with the full path to the `.mnem` directory in this repo
+(created by running `mnem init` in the project root). Without it, Make Me works
+in session-only mode.
 
 ## Usage
 
